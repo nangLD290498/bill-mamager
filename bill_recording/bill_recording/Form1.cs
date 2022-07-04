@@ -137,5 +137,10 @@ namespace bill_recording
         {
 
         }
+
+        private void label16_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
