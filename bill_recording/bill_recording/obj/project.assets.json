@@ -4362,19 +4362,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nangl\\.nuget\\packages\\": {}
+    "C:\\Users\\ldnang\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nangl\\source\\repos\\bill_recording\\bill_recording\\bill_recording.csproj",
+      "projectUniqueName": "C:\\Users\\ldnang\\Desktop\\bill-mamager\\bill_recording\\bill_recording\\bill_recording.csproj",
       "projectName": "bill_recording",
-      "projectPath": "C:\\Users\\nangl\\source\\repos\\bill_recording\\bill_recording\\bill_recording.csproj",
-      "packagesPath": "C:\\Users\\nangl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nangl\\source\\repos\\bill_recording\\bill_recording\\obj\\",
+      "projectPath": "C:\\Users\\ldnang\\Desktop\\bill-mamager\\bill_recording\\bill_recording\\bill_recording.csproj",
+      "packagesPath": "C:\\Users\\ldnang\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ldnang\\Desktop\\bill-mamager\\bill_recording\\bill_recording\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nangl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ldnang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

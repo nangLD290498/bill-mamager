@@ -12,15 +12,15 @@ namespace bill_recording
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-      
-                if(cbb_product_names.SelectedItem != null)
-                {
-                    setListProduct();
-                    readCSV.saveObjectToCSV(products, cbb_product_names.Text);
-                    ReadCSV searchCSV = new ReadCSV("searchData.csv");
-                    dgr_product_list.DataSource = searchCSV.readCSV;
-                    isSearching = true;
-                }
+
+            if (cbb_product_names.SelectedItem != null)
+            {
+                setListProduct();
+                readCSV.saveObjectToCSV(products, cbb_product_names.Text);
+                ReadCSV searchCSV = new ReadCSV("searchData.csv");
+                dgr_product_list.DataSource = searchCSV.readCSV;
+                isSearching = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,14 +30,14 @@ namespace bill_recording
 
         private void ll_config_prd_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            PrdConfig prConfig= new PrdConfig();
+            PrdConfig prConfig = new PrdConfig();
             prConfig.ShowDialog();
         }
 
         private void ll_reload_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-        
-            
+
+
         }
 
         private void btn_add_info_Click(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace bill_recording
 
         }
 
-        
+
         private void Form1_Load(object sender, EventArgs e)
         {
             ReadCSV searchCSV = new ReadCSV("selectedItems.csv");
@@ -89,7 +89,7 @@ namespace bill_recording
             System.Diagnostics.Debug.WriteLine(prd.Ten + "|" + prd.Gia + "|" + prd.ChietKhau + "|" + prd.SoLuong);
             foreach (Product p in products)
             {
-                if(p.Ten.Equals(prd.Ten) && p.Gia.Equals(prd.Gia) && p.ChietKhau.Equals(prd.ChietKhau))
+                if (p.Ten.Equals(prd.Ten) && p.Gia.Equals(prd.Gia) && p.ChietKhau.Equals(prd.ChietKhau))
                 {
                     newList.Add(prd);
                 }
@@ -98,10 +98,44 @@ namespace bill_recording
                     newList.Add(p);
                 }
             }
-            readCSV.saveListToCSV(newList);
+            readCSV.saveListToCSV(newList, "data.csv");
             //filter and save all with SL>0 to csv of selected ones 
+            List<Product> selectedList = new List<Product>();
+            foreach (Product p in newList)
+            {
+                try
+                {
+                    int SLInt = int.Parse(p.SoLuong);
+                    if (SLInt != null && SLInt > 0)
+                    {
+                        selectedList.Add(p);
+                    }
+                }
+                catch (Exception)
+                {
+                }
+            }
+            readCSV.saveListToCSV(selectedList, "selectedItems.csv");
             //load csv of selected ones
-            isSearching = false;
+            ReadCSV searchCSV = new ReadCSV("selectedItems.csv");
+            dgr_product_list.DataSource = searchCSV.readCSV;
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+    
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

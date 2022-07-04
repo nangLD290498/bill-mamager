@@ -42,7 +42,7 @@ namespace bill_recording
             }
         }
 
-        public void saveListToCSV(List<Product> products)
+        public void saveListToCSV(List<Product> products, String name)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("Ten,Gia,ChietKhau,SoLuong," + Environment.NewLine);
@@ -57,7 +57,7 @@ namespace bill_recording
                     sb.Append(",");
                     sb.Append(p.SoLuong.ToString());
                     sb.Append("," + Environment.NewLine);
-                    using (System.IO.StreamWriter sw = new System.IO.StreamWriter("data.csv", false))
+                    using (System.IO.StreamWriter sw = new System.IO.StreamWriter(name, false))
                     {
                         // Write the stringbuilder text to the the file.
                         sw.WriteLine(sb.ToString());
