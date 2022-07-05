@@ -12,7 +12,7 @@ namespace bill_recording
         public string DienThoai { get; set; }
         public string DiaChi { get; set; }
         public string NhanVien { get; set; }
-        public DateTime NgayThang { get; set; }
+        public string NgayThang { get; set; }
         public string SoTien { get; set; }
     }
 }

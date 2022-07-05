@@ -21,5 +21,11 @@ namespace bill_recording
         {
 
         }
+
+        private void btn_ok_Click(object sender, EventArgs e)
+        {
+            //store info to csv
+            // load to bill
+        }
     }
 }
