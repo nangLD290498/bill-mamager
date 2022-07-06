@@ -30,18 +30,18 @@
         {
             this.btn_ok = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_cus_name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_phone = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.tb_address = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tb_employee = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_date = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.tb_money_amount = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // btn_ok
@@ -64,12 +64,12 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Tên khách hàng";
             // 
-            // textBox1
+            // tb_cus_name
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 23);
-            this.textBox1.TabIndex = 2;
+            this.tb_cus_name.Location = new System.Drawing.Point(136, 42);
+            this.tb_cus_name.Name = "tb_cus_name";
+            this.tb_cus_name.Size = new System.Drawing.Size(196, 23);
+            this.tb_cus_name.TabIndex = 2;
             // 
             // label2
             // 
@@ -82,12 +82,12 @@
             this.label2.Text = "Điện thoại";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox2
+            // tb_phone
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 23);
-            this.textBox2.TabIndex = 4;
+            this.tb_phone.Location = new System.Drawing.Point(136, 87);
+            this.tb_phone.Name = "tb_phone";
+            this.tb_phone.Size = new System.Drawing.Size(196, 23);
+            this.tb_phone.TabIndex = 4;
             // 
             // label3
             // 
@@ -99,13 +99,13 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Địa chỉ";
             // 
-            // richTextBox1
+            // tb_address
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(137, 135);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(195, 62);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.tb_address.Location = new System.Drawing.Point(137, 135);
+            this.tb_address.Name = "tb_address";
+            this.tb_address.Size = new System.Drawing.Size(195, 62);
+            this.tb_address.TabIndex = 6;
+            this.tb_address.Text = "";
             // 
             // label4
             // 
@@ -117,12 +117,12 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Nhân viên ";
             // 
-            // textBox3
+            // tb_employee
             // 
-            this.textBox3.Location = new System.Drawing.Point(136, 219);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 23);
-            this.textBox3.TabIndex = 8;
+            this.tb_employee.Location = new System.Drawing.Point(136, 219);
+            this.tb_employee.Name = "tb_employee";
+            this.tb_employee.Size = new System.Drawing.Size(196, 23);
+            this.tb_employee.TabIndex = 8;
             // 
             // label5
             // 
@@ -143,12 +143,12 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Ngày tháng";
             // 
-            // dateTimePicker1
+            // dtp_date
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(136, 307);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(196, 23);
-            this.dateTimePicker1.TabIndex = 11;
+            this.dtp_date.Location = new System.Drawing.Point(136, 307);
+            this.dtp_date.Name = "dtp_date";
+            this.dtp_date.Size = new System.Drawing.Size(196, 23);
+            this.dtp_date.TabIndex = 11;
             // 
             // label7
             // 
@@ -160,13 +160,13 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Số tiền (chữ)";
             // 
-            // richTextBox2
+            // tb_money_amount
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(137, 343);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(195, 62);
-            this.richTextBox2.TabIndex = 13;
-            this.richTextBox2.Text = "";
+            this.tb_money_amount.Location = new System.Drawing.Point(137, 343);
+            this.tb_money_amount.Name = "tb_money_amount";
+            this.tb_money_amount.Size = new System.Drawing.Size(195, 62);
+            this.tb_money_amount.TabIndex = 13;
+            this.tb_money_amount.Text = "";
             // 
             // InformationInput
             // 
@@ -174,24 +174,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(367, 476);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.tb_money_amount);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_date);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tb_employee);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.tb_address);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tb_phone);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_cus_name);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_ok);
             this.MaximumSize = new System.Drawing.Size(383, 515);
             this.MinimumSize = new System.Drawing.Size(383, 515);
             this.Name = "InformationInput";
             this.Text = "InformationInput";
+            this.Load += new System.EventHandler(this.InformationInput_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,17 +202,17 @@
 
         private Button btn_ok;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox tb_cus_name;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox tb_phone;
         private Label label3;
-        private RichTextBox richTextBox1;
+        private RichTextBox tb_address;
         private Label label4;
-        private TextBox textBox3;
+        private TextBox tb_employee;
         private Label label5;
         private Label label6;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtp_date;
         private Label label7;
-        private RichTextBox richTextBox2;
+        private RichTextBox tb_money_amount;
     }
 }

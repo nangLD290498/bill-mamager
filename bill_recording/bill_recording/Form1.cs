@@ -61,6 +61,16 @@ namespace bill_recording
         {
             ReadCSV searchCSV = new ReadCSV("selectedItems.csv");
             dgr_product_list.DataSource = searchCSV.readCSV;
+
+            ReadExtraInforCsv readExtraInforCsv = new ReadExtraInforCsv();
+            ExtraInfo extraInfo = readExtraInforCsv.getfirstObject("additionalInfo.csv");
+            Form1 f = (Form1)Application.OpenForms["Form1"];
+            f.lb_cus_name.Text = extraInfo.TenKD;
+            f.lb_sdt.Text = extraInfo.DienThoai;
+            f.lb_address.Text = extraInfo.DiaChi;
+            f.lb_khachhang.Text = extraInfo.NhanVien;
+            f.lb_ngaythang.Text = extraInfo.NgayThang;
+            f.lb_sotien.Text = extraInfo.SoTien;
         }
 
         private void cbb_product_names_SelectedIndexChanged(object sender, EventArgs e)
